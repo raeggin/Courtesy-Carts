@@ -12,7 +12,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 </style>
 <body>
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
@@ -22,6 +21,8 @@ h1, h2, h3, h4, h5, h6 {
       <a href="#about" class="w3-bar-item w3-button">About Us</a>
       <a href="#contact" class="w3-bar-item w3-button">How It Works</a>
       <form class="w3-bar-item w3-button" method="get" action="account.html">
+      <!-- <a href="account.html" class="w3-bar-item w3-button"
+      rel="external">Create Accounts</a> -->
     <button type="submit">Create Account</button>
 </form>
     <form class="w3-bar-item w3-button" method="get" action="login.html">
@@ -81,15 +82,19 @@ h1, h2, h3, h4, h5, h6 {
   <!-- Contact Section -->
   <div class="w3-container w3-padding-64" id="contact">
     <h1>How It Works</h1><br>
-    <p class="w3-text-blue-grey w3-large"><b>Step 1: Click "Select Store:  Tab [ located in top right corner of webpage in navigation menu ]
+    <p class="w3-text-blue-grey w3-large"><b>Step 1:Create an account / Sign In. 
     <br /><br />
-    Step 2: Select the logo for the store you would like to order from.
+      Step2: Click 
+    <button type="submit">Select Store</button>
+     Tab [ located in top right corner of webpage in navigation menu ]
     <br /><br />
-    Step 3: Type in item names and quantity of each item you would like to purchase. 
+    Step 3: Select the logo for the store you would like to order from and click <button type="submit">Create Grocery List</button> when you are ready to make your grocery list.
     <br /><br />
-    Step 4: Delete any items from the cart using trash icon 
+    Step 4: Type in item names and quantity of each item you would like to purchase. 
     <br /><br />
-    Step 5: Use checkboxes to manually mark items as purchased. [ Items that are in the selected stores inventory will be automatically marked as purchased when the "Finalize my Grocery List" button is selected.</b></p>
+    Step 5: Delete any items from the cart using trash icon.
+    <br /><br />
+    Step 6: Use checkboxes to manually mark items as purchased. Click <button type="submit">Save</button> when you are done making your grocery list and ready to save.</b> </p>
     <form action="/action_page.php" target="_blank">
     </form>
   </div>
@@ -101,6 +106,29 @@ h1, h2, h3, h4, h5, h6 {
 <footer class="w3-center w3-light-grey w3-padding-32">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">scheme.org</a></p>
 </footer>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCwJRjpPeXISrkDOHkzMXrZ8MpvAKiU_uI",
+    authDomain: "courtesy-carts.firebaseapp.com",
+    databaseURL: "https://courtesy-carts.firebaseio.com",
+    projectId: "courtesy-carts",
+    storageBucket: "courtesy-carts.appspot.com",
+    messagingSenderId: "754676171856",
+    appId: "1:754676171856:web:2b24fa8a76bf806b3d7d55",
+    measurementId: "G-SD4FTHF7Z6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
