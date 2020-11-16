@@ -1,33 +1,37 @@
 <div class="paper">
   <div class="lines">
     <div class="text" contenteditable spellcheck="false">
-      Past Purchases <br /><br/>
-      Share - Reorder </div>
+    <label id="storeLabel" for="fname">No List Has been made</label> <br /><br /> 
+    <label id="deliveryLabel" for="fname"></label> <br /><br />  
+<label id="labelOneItem" for="fname"></label>
+<label id="labelOneQty" for="lname"></label><br />
+<label id="labelTwoItem" for="fname"></label>
+<label id="labelTwoQty" for="lname"></label><br />
+<label id="labelThreeItem" for="fname"></label>
+<label id="labelThreeQty" for="lname"></label><br />
+<label id="labelFourItem" for="fname"></label>
+<label id="labelFourQty" for="lname"></label><br />
+<label id="labelFiveItem" for="fname"></label>
+<label id="labelFiveQty" for="lname"></label><br />
+
+
+
+
+</div>
+<script type="application/javascript" src="pastpurchases.js"></script>
+</body>
+</html>
+
+      
   </div>
   <div class="holes hole-top"></div>
   <div class="holes hole-middle"></div>
   <div class="holes hole-bottom"></div>
 </div>
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-pinterest"></a>
-<form class="w3-bar-item w3-button" method="get" action="index.html">
-    <button type="submit">Reorder</button>
-</form>
-<form class="w3-bar-item w3-button" method="get" action="index.html">
-    <button type="submit">Share</button>
+<form onsubmit="return submitForm()" id="finalizeForm"class="w3-bar-item w3-button" method="get" action="homepage.html">
+    <button type="submit">Home</button>
 </form>
 
-
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-
-</html> 
 <style>
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 body {
@@ -37,8 +41,8 @@ body {
 }
 .paper {
   position: absolute;
-  height: 350px;
-  width: 250px;
+  height: 550px;
+  width: 450px;
   background: rgba(255,255,255,0.9);
   margin: -275px -225px;
   left: 50%;
@@ -87,39 +91,6 @@ body {
 }
 .hole-bottom {
   bottom: 10%;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
 }
 
 </style>

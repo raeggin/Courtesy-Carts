@@ -1,5 +1,5 @@
 <form class="w3-bar-item w3-button" method="get" action="createaccount.html">
-    <button type="submit">Save</button>
+    <button onclick="submitForm()" type="submit">Save</button>
 </form>
 
 <html>
@@ -9,12 +9,30 @@
 
 <form action="/action_page.php">
   <label for="fname">Select Courrier: </label>
-  <input type="text" id="fname" name="fname"><br><br>
+  <select name="courriers" id="courriers">
+    <option value="DoorDash">DoorDash</option>
+    <option value="Instacart">Instacart</option>
+    <option value="Postmates">Postmates</option>
+    <option value="Shipt">Shipt</option>
+    <option value="UberEats">UberEats</option>
+  </select><br><br>
   <label for="lname">Select Time: </label>
-  <input type="text" id="lname" name="lname"><br><br>
+  <select name="times" id="times">
+    <option value="8:00AM-9:00AM">8:00AM-9:00AM</option>
+    <option value="9:00AM-10:00AM">9:00AM-10:00AM</option>
+    <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+    <option value="11:00AM-12:00PM">11:00AM-12:00PM</option>
+    <option value="12:00PM-1:00PM">12:00PM-1:00PM</option>
+    <option value="1:00PM-2:00PM">1:00PM-2:00PM</option>
+    <option value="2:00PM-3:00PM">2:00PM-3:00PM</option>
+    <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>
+    <option value="4:00PM-5:00PM">4:00PM-5:00PM</option>
+    <option value="5:00PM-6:00PM">5:00PM-6:00PM</option>
+  </select>
 </form>
 
 <p>Click on the save button to submit the form.</p>
 
+<script type="application/javascript" src="delivery.js"></script>
 </body>
 </html>

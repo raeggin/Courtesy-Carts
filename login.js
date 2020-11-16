@@ -8,11 +8,14 @@ function submitForm() {
   var accountPsw = document.getElementById("psw");
   var userPsw= accountPsw.value;
 
-if (at == -1 ){
+
+ if (at == -1 ){
     alert("Not a valid e-mail!");
     return false
   }
   else{
     alert("Submitted");
   }
+
 }
+

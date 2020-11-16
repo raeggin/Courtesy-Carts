@@ -2,36 +2,34 @@
 <div class="paper">
   <div class="lines">
     <div class="text" contenteditable spellcheck="false">
-      Grocery List <br /><br /> 
-   <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-    <input type="checkbox" id="myCheck" onclick="myFunction()"> <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br><input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity:</label>
-  <input type="text" id="lname" name="lname" value="">
+    <label id="storeLabel" for="fname"></label> <br /><br />
+   <label id="labelOneItem" for="fname">Item name:</label>
+  <input id="itemOneName" type="text" id="fname" name="fname" value=""><br>
+  <label id="labelOneQty" for="lname">Quantity :</label>
+  <input id="itemOneQuantity" type="text" id="lname" name="lname" value=""><br>
+    <label  id="labelTwoItem" for="fname">Item name:</label>
+  <input id="itemTwoName" type="text" id="fname" name="fname" value=""><br>
+  <label id="labelTwoQty" for="lname">Quantity :</label>
+  <input id="itemTwoQuantity" type="text" id="lname" name="lname" value=""><br>
+   <label id="labelThreeItem" for="fname">Item name:</label>
+  <input id="itemThreeName" type="text" id="fname" name="fname" value=""><br>
+  <label id="labelThreeQty" for="lname">Quantity :</label>
+  <input id="itemThreeQuantity" type="text" id="lname" name="lname" value=""><br>
+   <label id="labelFourItem" for="fname">Item name:</label>
+  <input id="itemFourName" type="text" id="fname" name="fname" value=""><br>
+  <label id="labelFourQty" for="lname">Quantity :</label>
+  <input id="itemFourQuantity" type="text" id="lname" name="lname" value=""><br>
+   <label id="labelFiveItem" for="fname">Item name:</label>
+  <input id="itemFiveName" type="text" id="fname" name="fname" value=""><br>
+  <label id="labelFiveQty" for="lname">Quantity:</label>
+  <input id="itemFiveQuantity" type="text" id="lname" name="lname" value="">
 </form>
 
 
 
 
 </div>
+<script type="application/javascript" src="grocerylist.js"></script>
 </body>
 </html>
 
@@ -41,7 +39,7 @@
   <div class="holes hole-middle"></div>
   <div class="holes hole-bottom"></div>
 </div>
-<form class="w3-bar-item w3-button" method="get" action="delete.html">
+<form onsubmit="return submitForm()" id="finalizeForm"class="w3-bar-item w3-button" method="get" action="delete.html">
     <button type="submit">Finalize</button>
 </form>
 

@@ -1,19 +1,63 @@
 <label for="stores"><b>Select a Store:</b></label>
 <br /><br />
 
-<button id="wholefoods"></button>
-<button id="traderjoes"></button>
-<button id="publix"></button>
-<button id="samsclub"></button>
-<button id="kroger"></button>
-<button id="costco"></button>
-<button id="sprouts"></button>
-<button id="traderjoes"></button>
-<button id="sprouts"></button>
-
-<form method="get" action="grocerylist.html">
+<table width="100%" cellspacing="0" cellpadding="3px">
+<tr>
+    <td>
+        <input type="button" value="Sams Club" id="samsclub" name="select1" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Costco" id="costco" name="select2" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Sprouts" id="sprouts" name="select3" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Walmart" id="walmart" name="select4" onclick="highlight(this)" />
+    </td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="3px">
+<tr>
+    <td>
+        <input type="button" value="Whole Foods" id="wholefoods" name="select1" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Trader Joe's" id="traderjoes" name="select2" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Publix" id="publix" name="select3" onclick="highlight(this)" />
+    </td>
+    <td>
+        <input type="button" value="Kroger" id="kroger" name="select4" onclick="highlight(this)" />
+    </td>
+</tr>
+</table>
+<form onsubmit= "return submitAlert(this)"
+method="get" action="grocerylist.html">
     <button type="submit">Create Grocery List</button>
 </form>
+<script type="text/javascript">
+var buttonClicked = null;
+
+function highlight(element) {
+    if (buttonClicked != null) {
+        buttonClicked.style.background = "grey";
+        buttonClicked.style.color = "black";
+    }
+    buttonClicked = element;
+    buttonClicked.style.background = "red";
+    buttonClicked.style.color = "white";
+    var store = element.value;
+    localStorage.setItem("selectedStore", store);
+
+}
+function submitAlert() {
+  var myStore = localStorage.getItem("selectedStore");
+  alert("Starting grocery list for " + myStore+ "...");
+  // alert("Starting Grocery List for " + myStore);
+}
+</script>
 <style>
 
   #wholefoods {
@@ -58,13 +102,21 @@
   background-size: cover;
   background-color: #eee;
   }
-  #kroger {
+  #walmart {
   width: 200px;
   height: 150px;
-  background-image: url('https://i.ibb.co/cywLZfG/images.jpg');
+  background-image: url("https://i.ibb.co/kqP555q/Walmart1-Logo-scaled.jpg");
   background-size: cover;
   background-color: #eee;
   }
+  #kroger {
+  width: 200px;
+  height: 150px;
+  background-image: url("https://i.ibb.co/gPnXXzn/images.jpg");
+  background-size: cover;
+  background-color: #eee;
+  }
+
   
 
 </style>

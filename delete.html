@@ -2,7 +2,7 @@
     <button type="submit">Save</button>
 </form>
 <form class="w3-bar-item w3-button" method="get" action="grocerylist.html">
-    <button type="edit">Edit</button>
+    <button type="edit">Start Over</button>
 </form>
 <form class="w3-bar-item w3-button" method="get" action="delivery.html">
     <button type="edit">Delivery</button>
@@ -10,63 +10,55 @@
 <div class="paper">
   <div class="lines">
     <div class="text" contenteditable spellcheck="false">
-      Grocery List <br /><br /> 
-   <button type="button" class="btn btn-default btn-sm">
+    <label id="storeLabel" for="fname"></label> <br /><br /> 
+   <button onclick="deleteItem('firstLabel', 'labelOneQty','delItemOneBtn','checkboxOne','firstItem','firstItemQty')" id="delItemOneBtn" type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-trash"></span> Delete 
         </button> 
-        <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-    <button type="button" class="btn btn-default btn-sm">
+        <input id="checkboxOne" type="checkbox" id="myCheck" onclick="purchased()"> 
+   <label id="firstLabel" for="fname"></label>
+  <label id="labelOneQty" for="lname"></label>
+  <br>
+    <button onclick="deleteItem('secondLabel', 'labelTwoQty','delItemTwoBtn','checkboxTwo','secondItemName','secondItemQty')" id="delItemTwoBtn" type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-trash"></span> Delete 
         </button> 
-        <input type="checkbox" id="myCheck" onclick="myFunction()"> <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <button type="button" class="btn btn-default btn-sm">
+        <input id="checkboxTwo" type="checkbox" id="myCheck" onclick="purchased()">
+   <label id="secondLabel" for="fname"></label>
+  <label id="labelTwoQty" for="lname"></label>
+  <br>
+  <button onclick="deleteItem('thirdLabel', 'labelThreeQty','delItemThreeBtn','checkboxThree','thirdItemName','thirdItemQty')" id="delItemThreeBtn" type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-trash"></span> Delete 
-        </button><input type="checkbox" id="myCheck" onclick="myFunction()"> 
-     <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <button type="button" class="btn btn-default btn-sm">
+        </button> 
+        <input id="checkboxThree" type="checkbox" id="myCheck" onclick="purchased()">
+   <label id="thirdLabel" for="fname"></label>
+  <label id="labelThreeQty" for="lname"></label>
+  <br>
+  <button onclick="deleteItem('fourthLabel', 'labelFourQty','delItemFourBtn','checkboxFour','fourthItemName','fourthItemQty')" id="delItemFourBtn" type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-trash"></span> Delete 
-        </button>
-        <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity :</label>
-  <input type="text" id="lname" name="lname" value=""><br>
-  <button type="button" class="btn btn-default btn-sm">
+        </button> 
+        <input id="checkboxFour" type="checkbox" id="myCheck" onclick="purchased()"> 
+   <label id="fourthLabel" for="fname"></label>
+  <label id="labelFourQty" for="lname"></label>
+  <br>
+  <button onclick="deleteItem('fifthLabel', 'labelFiveQty','delItemFiveBtn','checkboxFive','fifthItemName','fifthItemQty')" id="delItemFiveBtn" type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-trash"></span> Delete 
-        </button>
-        <input type="checkbox" id="myCheck" onclick="myFunction()"> 
-   <label for="fname">Item name:</label>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Quantity:</label>
-  <input type="text" id="lname" name="lname" value="">
+        </button> 
+        <input id="checkboxFive" type="checkbox" id="myCheck" onclick="purchased()">
+   <label id="fifthLabel" for="fname">Orange</label>
+  <label id="labelFiveQty" for="lname"></label>
 </form>
 
 
 
 
 </div>
+<script type="application/javascript" src="delete.js"></script>
 </body>
-</html>
-
-      
+</html> 
   </div>
   <div class="holes hole-top"></div>
   <div class="holes hole-middle"></div>
   <div class="holes hole-bottom"></div>
 </div>
-<form class="w3-bar-item w3-button" method="get" action="delete.html">
-    <button type="submit">Finalize</button>
-</form>
 
 <style>
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
